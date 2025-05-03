@@ -30,7 +30,7 @@ class Todo extends Model
         return $this->belongsTo(TodoColumn::class);
     }
 
-    public function todoComments(): HasMany
+    public function comments(): HasMany
     {
         return $this->hasMany(TodoComment::class);
     }

@@ -155,6 +155,14 @@ img {
     border-radius: 8px;
 }
 
+.comment {
+    background-color: #eaeffa;
+    padding: 6px 10px; /* adds some spacing around text */
+    margin: 6px;
+    border-radius: 8px;
+    width:fit-content ;
+}
+
 *::-webkit-scrollbar {
     width: 8px;
 }

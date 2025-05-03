@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class TodoComment extends Model
 {
     protected $fillable = [
-        'description'
+        'description',
+        'todo_id'
     ];
 
     public function user(): BelongsTo

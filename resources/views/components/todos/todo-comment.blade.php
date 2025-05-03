@@ -1,4 +1,6 @@
-<div class="modal fade" id="modal-comment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+@props(['id'])
+
+<div class="modal fade" id="modal-comment-{{ $id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -11,8 +13,12 @@
           <div class="card border-0 h-100">
             <div class="card-body d-flex flex-column p-3" style="overflow-y: auto;">
               <!-- Dynamic chat messages -->
-              <div>
-                {{ $description }}
+              <div class="d-flex flex-column align-items-end">
+                @foreach ($description as $comment)
+                    <div class="comment">
+                        {{ $comment->description }}
+                    </div>
+                @endforeach
               </div>
             </div>
   
@@ -22,7 +28,8 @@
               <form class="w-100 d-flex align-items-center gap-4" method="POST" action="{{ route('comment.store') }}">
                 @csrf
                 <div class="w-100">
-                    <input type="text" class="form-control me-2" placeholder="Digite uma mensagem...">
+                    <input type="hidden" value="{{ $id }}" name="todo_id">
+                    <input type="text" class="form-control me-2" placeholder="Digite uma mensagem..." name="description">
                 </div>
                 <a href="#" class="text-muted me-2"><i class="fas fa-paperclip"></i></a>
                 <a href="#" class="text-muted me-2"><i class="fas fa-smile"></i></a>
