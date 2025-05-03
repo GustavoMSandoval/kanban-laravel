@@ -1,8 +1,9 @@
 <?php
 
-use App\Models\Todo;
+use App\Http\Controllers\TodoColumnController;
+use App\Http\Controllers\TodoCommentController;
+use App\Http\Controllers\TodoController;
 use App\Models\TodoColumn;
-use App\Models\TodoComment;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,6 +14,6 @@ Route::get('/', function () {
 });
 
 
-Route::post('/todos/column',[TodoColumn::class, 'store'])->name('column.store');
-Route::post('/todos/card',[Todo::class, 'store' ])->name('card.store');
-Route::post('/todos/comment',[TodoComment::class, 'store'])->name('comment.store');
+Route::post('/todos/column',[TodoColumnController::class, 'store'])->name('column.store');
+Route::post('/todos/card',[TodoController::class, 'store' ])->name('card.store');
+Route::post('/todos/comment',[TodoCommentController::class, 'store'])->name('comment.store');

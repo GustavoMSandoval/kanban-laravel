@@ -7,8 +7,9 @@
             </div>
             <div class="modal-body">
                 <form method="POST" action="{{ route('column.store') }}">
+                  @csrf
                     <input type="text" class="form-control mb-3" name="title">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
                 </form>
             </div>
         <div class="modal-footer">
