@@ -1,7 +1,7 @@
 <div class="kanban-column" data-id="1">
     <div class="kanban-title">
         <h2>
-            Pendente
+            {{ $title }}
         </h2>
         <button class="add-card">
             <i class="fa-solid fa-plus"></i>

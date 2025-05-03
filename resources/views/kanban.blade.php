@@ -10,12 +10,15 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
+        <nav class="m-5 fixed-top d-flex justify-content-end">
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-column">Criar coluna +</button>
+        </nav>
         <main class="kanban">
             
             @foreach ($columns as $column)
                 <x-todos.todo-column :title="$column->title" :todos="$column->todos"/>
             @endforeach
-
+            <x-modal-column/>
         </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
         <script src="src/js/script.js"></script>
