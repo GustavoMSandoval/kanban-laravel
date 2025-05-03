@@ -17,7 +17,9 @@
             @foreach ($columns as $column)
                 <x-todos.todo-column :column="$column" :todos="$column->todos"/>
             @endforeach
-        
+
+           
+              
     </main>
     <x-modal-column/>
     

@@ -133,11 +133,13 @@ body {
     gap: 18px;
 }
 
-.card-icons i {
+.card-icons i, button {
     color: #a8a8aa;
+    border: none;
+    background-color: transparent;
 }
 
-.user img {
+img {
     width: 42px;
     height: 42px;
     border-radius: 100%;

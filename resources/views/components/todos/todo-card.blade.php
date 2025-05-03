@@ -18,9 +18,9 @@
     <div class="card-infos">
         <div class="card-icons">
             <p>
-                <i class="fa-regular fa-comment">
+                <button class="fa-regular fa-comment" data-bs-toggle="modal" data-bs-target="#modal-comment">
                     {{ $todo->comments_quantity }}
-                </i>
+                </button>
             </p>
             <p>
                 <i class="fa-solid fa-paperclip">
@@ -33,3 +33,4 @@
         </div>
     </div>
 </div>
+<x-todos.todo-comment :description="$todo->comments"/>
