@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(TodoColumn::class)->constrained()->onDelete('cascade');
             $table->string('description');
-            $table->integer('quantity_post');
+            $table->integer('quantity_post')->default(0);
             $table->boolean('isHighPriority');
             $table->timestamps();
         });

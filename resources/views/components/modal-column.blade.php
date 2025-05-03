@@ -8,13 +8,13 @@
             <div class="modal-body">
                 <form method="POST" action="{{ route('column.store') }}">
                   @csrf
-                    <input type="text" class="form-control mb-3" name="title">
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <input type="text" class="form-control my-3" name="title">
+                    <div class="modal-footer mt-2">
+                      <button type="submit" class="btn btn-primary">Salvar</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
                 </form>
             </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-        </div>
       </div>
     </div>
   </div>

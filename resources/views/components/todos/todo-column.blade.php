@@ -1,9 +1,9 @@
-<div class="kanban-column" data-id="1">
+<div class="kanban-column" data-id="{{ $column->id }}">
     <div class="kanban-title">
         <h2>
-            {{ $title }}
+            {{ $column->title }}
         </h2>
-        <button class="add-card">
+        <button class="add-card" data-bs-toggle="modal" data-bs-target="#modal-todo-{{ $column->id }}">
             <i class="fa-solid fa-plus"></i>
         </button>
     </div>
@@ -13,3 +13,4 @@
         @endforeach
     </div>
 </div>
+<x-modal-todo :id="$column->id"/>

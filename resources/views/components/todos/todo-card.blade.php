@@ -1,11 +1,19 @@
 <div class="kanban-card" draggable="true">
-    <div class="badge high">
-        <span>
-            {{ $todo->isHighPriority }}
-        </span>
-    </div>
+    @if ($todo->isHighPriority)
+        <div class="badge high">
+            <span>
+                Alta prioridade
+            </span>
+        </div>
+    @else
+        <div class="badge normal">
+            <span>
+                Prioridade normal
+            </span>
+        </div>
+    @endif
     <p class="card-title">
-        {{ $todo->description }}
+        {{ Str::limit($todo->description, 30) }}
     </p>
     <div class="card-infos">
         <div class="card-icons">

@@ -10,6 +10,7 @@ class TodoCommentController extends Controller
     public function store(Request $request)
     {
         $incomingFields = $request->validate([
+            'todo_id' => 'required',
             'description' => 'required'
         ]);
 

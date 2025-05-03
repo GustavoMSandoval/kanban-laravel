@@ -10,6 +10,7 @@ class TodoController extends Controller
     public function store(Request $request)
     {
         $incomingFields = $request->validate([
+            'todo_column_id' => 'required',
             'isHighPriority' => ['required', 'boolean'],
             'description' => 'required',
         ]);

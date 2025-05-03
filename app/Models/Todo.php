@@ -10,7 +10,9 @@ class Todo extends Model
 {
     protected $fillable = [
         'description',
-        'comments_quantity'
+        'comments_quantity',
+        'isHighPriority',
+        'todo_column_id',
     ];
 
     protected $casts = [

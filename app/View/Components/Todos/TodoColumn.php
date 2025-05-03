@@ -8,12 +8,12 @@ use Illuminate\View\Component;
 
 class TodoColumn extends Component
 {  
-    public $title;
+    public $column;
     public $todos;
 
-    public function __construct($title, $todos)
+    public function __construct($column, $todos)
     {
-        $this->title = $title;
+        $this->column = $column;
         $this->todos = $todos;
     }
 

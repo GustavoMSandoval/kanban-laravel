@@ -15,5 +15,5 @@ Route::get('/', function () {
 
 
 Route::post('/todos/column',[TodoColumnController::class, 'store'])->name('column.store');
-Route::post('/todos/card',[TodoController::class, 'store' ])->name('card.store');
+Route::post('/todos/card',[TodoController::class, 'store' ])->name('todo.store');
 Route::post('/todos/comment',[TodoCommentController::class, 'store'])->name('comment.store');
