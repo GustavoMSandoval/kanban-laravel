@@ -3,7 +3,7 @@
         <h2>
             {{ $column->title }}
         </h2>
-        <button class="add-card" data-bs-toggle="modal" data-bs-target="#modal-todo-{{ $column->id }}">
+        <button class="add-card" data-bs-toggle="modal" data-bs-target="#modal-todo-{{ $column->id }}" data-bs-backdrop="static"  data-bs-keyboard="false">
             <i class="fa-solid fa-plus"></i>
         </button>
     </div>

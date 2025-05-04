@@ -17,7 +17,7 @@
                     <div class="mb-3">
                       <input type="radio" class="form-check-input" name="isHighPriority" value="1">
                       <label class="form-check-label">Alta prioridade</label>
-                      <input type="radio" class="form-check-input" name="isHighPriority" value="2">
+                      <input type="radio" class="form-check-input" name="isHighPriority" value="0">
                       <label class="form-check-label">Prioridade normal</label>
                     </div>
                     <div class="modal-footer">

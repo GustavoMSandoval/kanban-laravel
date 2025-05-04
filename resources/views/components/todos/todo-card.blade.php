@@ -6,7 +6,7 @@
             </span>
         </div>
     @else
-        <div class="badge normal">
+        <div class="badge medium">
             <span>
                 Prioridade normal
             </span>

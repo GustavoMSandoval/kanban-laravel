@@ -11,7 +11,7 @@ class TodoController extends Controller
     {
         $incomingFields = $request->validate([
             'todo_column_id' => 'required',
-            'isHighPriority' => ['required', 'boolean'],
+            'isHighPriority' => 'required',
             'description' => 'required',
         ]);
 
